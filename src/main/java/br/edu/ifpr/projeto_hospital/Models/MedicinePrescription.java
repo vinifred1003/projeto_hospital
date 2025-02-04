@@ -14,7 +14,7 @@ import lombok.*;
 public class MedicinePrescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idMedicinePrescription;
+    private int medicinePrescriptionId;
 
     @Column(nullable = false)
     private String drugName;
@@ -34,4 +34,8 @@ public class MedicinePrescription {
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false) // Creates a foreign key doctor_id
     private Doctor doctor;
+
+    @OneToOne
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
 }

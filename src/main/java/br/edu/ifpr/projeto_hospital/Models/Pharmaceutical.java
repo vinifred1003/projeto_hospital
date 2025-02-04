@@ -10,7 +10,7 @@ import jakarta.persistence.OneToOne;
 public class Pharmaceutical {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long pharmaceuticalId;
 
     @Column(nullable = false)
     private String name;

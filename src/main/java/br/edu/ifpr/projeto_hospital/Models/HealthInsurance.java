@@ -25,7 +25,7 @@ public class HealthInsurance {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long healthInsuranceId;
 
     @Column(nullable = false)
     private String authorizedDrugsName;

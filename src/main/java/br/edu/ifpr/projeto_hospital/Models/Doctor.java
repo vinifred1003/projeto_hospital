@@ -25,13 +25,14 @@ import lombok.ToString;
 @ToString
 public class Doctor {
     
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long doctorId;
 
     @Column(nullable = false)
     private String name;
 
-    @Id
+
     @Column(nullable = false)
     private String digitalSignature;
 
