@@ -28,7 +28,6 @@ public class UserController {
         User u = new User();
         u.setUsername(username);
         u.setPassword(password);
-        u.setIsDoctor(isDoctor);
         userRepository.save(u);
         return "Saved";
     }

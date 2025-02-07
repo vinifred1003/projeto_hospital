@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/home").setViewName("home");
-        registry.addViewController("/").setViewName("home");
-        registry.addViewController("/hello").setViewName("hello");
+        registry.addViewController("/pharmaceutical-home").setViewName("PharmaceuticalHome");
+        registry.addViewController("/").setViewName("login");
+        registry.addViewController("/doctor-home").setViewName("DoctorHome");
         registry.addViewController("/login").setViewName("login");
     }
 }
