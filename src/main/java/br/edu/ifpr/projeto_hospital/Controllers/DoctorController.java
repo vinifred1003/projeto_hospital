@@ -16,30 +16,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RestController
 public class DoctorController {
 
-private DoctorRepository doctorRepository;
+  private DoctorRepository doctorRepository;
 
-  @GetMapping("/")
-  public String index() {
-    return "Welcome to the home page!";
-  }
+  // @GetMapping("/")
+  // public String index() {
+  // return "Welcome to the home page!";
+  // }
 
   // @PostMapping(path="/add") // Map ONLY POST Requests
   // public @ResponseBody String addNewDoctor (@RequestParam String name
-  //     , @RequestParam String email) {
-  //   // @ResponseBody means the returned String is the response, not a view name
-  //   // @RequestParam means it is a parameter from the GET or POST request
+  // , @RequestParam String email) {
+  // // @ResponseBody means the returned String is the response, not a view name
+  // // @RequestParam means it is a parameter from the GET or POST request
 
-  //   Doctor n = new Doctor();
-  //   n.setName(name);
-  //   n.setEmail(email);
-  //   userRepository.save(n);
-  //   return "Saved";
+  // Doctor n = new Doctor();
+  // n.setName(name);
+  // n.setEmail(email);
+  // userRepository.save(n);
+  // return "Saved";
   // }
 
   // @GetMapping(path="/all")
   // public @ResponseBody Iterable<User> getAllUsers() {
-  //   // This returns a JSON or XML with the users
-  //   return userRepository.findAll();
+  // // This returns a JSON or XML with the users
+  // return userRepository.findAll();
   // }
 
 }

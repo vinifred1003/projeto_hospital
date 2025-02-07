@@ -25,13 +25,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String username;
 
+    @Column(nullable = false)
+    private String password;
     
     @Column(nullable = false)
     private Boolean isDoctor;
 
-    @Column(nullable = false, unique=true)
-    private String crm;
+
 }

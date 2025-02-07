@@ -23,14 +23,14 @@ import jakarta.persistence.Table;
 @Setter
 @ToString
 public class Patient {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long patientId;
 
     @Column(nullable = false)
     private String name;
 
-    @Id
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String cpf;
 
     @Column(nullable = false, unique = true)
