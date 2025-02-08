@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import br.edu.ifpr.projeto_hospital.service.CustomUserDetailsService;
-
+import br.edu.ifpr.projeto_hospital.service.CustomAuthenticationSuccessHandler;
 import org.springframework.security.authentication.AuthenticationManager;
 
 @Configuration
@@ -20,8 +20,12 @@ public class WebSecurityConfig {
 
   private final UserDetailsService userDetailsService;
 
-  public WebSecurityConfig(CustomUserDetailsService userDetailsService) {
+  private final CustomAuthenticationSuccessHandler successHandler;
+
+  public WebSecurityConfig(CustomUserDetailsService userDetailsService,
+      CustomAuthenticationSuccessHandler successHandler) {
     this.userDetailsService = userDetailsService;
+    this.successHandler = successHandler;
   }
 
   @Bean
@@ -34,6 +38,7 @@ public class WebSecurityConfig {
             .anyRequest().authenticated())
         .formLogin((form) -> form
             .loginPage("/login")
+            .successHandler(successHandler)
             .permitAll())
         .logout((logout) -> logout.permitAll());
 
