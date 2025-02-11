@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name= "medicine_prescription")
+@Table(name = "medicine_prescriptions")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -32,7 +32,7 @@ public class MedicinePrescription {
     private String observation;
 
     @ManyToOne
-    @JoinColumn(name = "doctor_id", nullable = false) // Creates a foreign key doctor_id
+    @JoinColumn(name = "doctor_id", nullable = false)
     private Doctor doctor;
 
     @OneToOne

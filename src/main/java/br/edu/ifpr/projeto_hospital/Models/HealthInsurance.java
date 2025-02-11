@@ -15,7 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name= "health_insurance")
+@Table(name = "health_insurances")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

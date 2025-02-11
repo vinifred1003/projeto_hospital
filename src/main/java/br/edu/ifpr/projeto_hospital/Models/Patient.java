@@ -16,7 +16,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Patient")
+@Table(name = "Patients")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -36,10 +36,7 @@ public class Patient {
     @Column(nullable = false, unique = true)
     private String birthdate;
 
-    @Column(nullable = false)
-    private Boolean hasHealthInsurance;
-
     @OneToOne
-    @JoinColumn(name = "healthInsurance_id", nullable = false)
+    @JoinColumn(name = "healthInsurance_id")
     private HealthInsurance healthInsurance;
 }

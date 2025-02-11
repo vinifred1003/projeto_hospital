@@ -17,7 +17,7 @@ import lombok.ToString;
  
 
 @Entity
-@Table(name="Doctor")
+@Table(name = "Doctors")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -43,6 +43,5 @@ public class Doctor {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    
-    
+
 }

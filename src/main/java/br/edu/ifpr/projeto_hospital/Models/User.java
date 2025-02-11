@@ -20,7 +20,7 @@ import jakarta.persistence.Table;
 import java.util.Set;
 
 @Entity
-@Table(name="User")
+@Table(name = "Users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

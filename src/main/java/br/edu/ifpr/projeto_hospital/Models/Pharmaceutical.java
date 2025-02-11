@@ -16,7 +16,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
 @Entity
-@Table(name = "Pharmaceutical")
+@Table(name = "Pharmaceuticals")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

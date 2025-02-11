@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Entity;
 
 @Entity
-@Table(name = "Drug")
+@Table(name = "Drugs")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
