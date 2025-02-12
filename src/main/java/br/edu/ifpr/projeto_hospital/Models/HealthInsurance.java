@@ -15,7 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "health_insurances")
+@Table(name = "health_insurance_drugs")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -25,7 +25,7 @@ public class HealthInsurance {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long healthInsuranceId;
+    private Long healthInsuranceDrugId;
 
     @Column(nullable = false)
     private String authorizedDrugsName;

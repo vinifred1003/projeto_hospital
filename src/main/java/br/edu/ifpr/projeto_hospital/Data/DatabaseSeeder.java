@@ -30,7 +30,10 @@ public class DatabaseSeeder implements CommandLineRunner {
 
         jdbcTemplate.update("INSERT INTO pharmaceuticals (name, crf, user_id) VALUES ('Fabio Melo', '12345',1);");
 
-        jdbcTemplate.update("INSERT INTO health_insurances (authorized_drugs_code, authorized_drugs_name) VALUES ('12345','dramin');");
+        jdbcTemplate.update(
+                "INSERT INTO health_insurance_drugs (authorized_drugs_code, authorized_drugs_name) VALUES ('12345','dramin');");
+
+        jdbcTemplate.update("INSERT INTO drugs (drugs_code, drugs_name) VALUES ('12345','dramin'), (3214, 'dorflex');");
 
         jdbcTemplate.update( "INSERT INTO Patients (name, cpf, birthdate, health_insurance_id) VALUES ('John Doe', '12345678900', '1990-05-15', 1);");
 

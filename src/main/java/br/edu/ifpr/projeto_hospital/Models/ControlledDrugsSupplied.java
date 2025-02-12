@@ -7,13 +7,17 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -33,9 +37,9 @@ public class ControlledDrugsSupplied {
     @Column(nullable = false, columnDefinition = "DATE")
     private LocalDate issuedDate;
 
-    @ManyToOne
-    @JoinColumn(name = "drug_id", nullable = false) // Creates a foreign key doctor_id
-    private Drug drug;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "drugs_supplied_id", joinColumns = @JoinColumn(name = "drug_id"), inverseJoinColumns = @JoinColumn(name = "controlled_drugs_supplied_id"))
+    private Set<Drug> drugs;
 
     @ManyToOne
     @JoinColumn(name = "pharmaceutical_id", nullable = false)

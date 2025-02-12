@@ -12,7 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -33,10 +33,10 @@ public class Patient {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String birthdate;
 
-    @OneToOne
-    @JoinColumn(name = "healthInsurance_id")
+    @ManyToOne
+    @JoinColumn(name = "healthInsurance_id", nullable = true)
     private HealthInsurance healthInsurance;
 }
