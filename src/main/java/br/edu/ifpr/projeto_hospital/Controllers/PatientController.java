@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.ifpr.projeto_hospital.Models.HealthInsurance;
-import br.edu.ifpr.projeto_hospital.Models.MedicinePrescription;
 import br.edu.ifpr.projeto_hospital.Models.Patient;
 import br.edu.ifpr.projeto_hospital.Repository.InsuranceRepository;
 import br.edu.ifpr.projeto_hospital.Repository.PatientRepository;

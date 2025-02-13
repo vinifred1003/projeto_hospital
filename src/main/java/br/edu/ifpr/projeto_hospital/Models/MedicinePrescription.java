@@ -14,7 +14,7 @@ import lombok.*;
 public class MedicinePrescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int medicinePrescriptionId;
+    private Long medicinePrescriptionId;
 
     @Column(nullable = false)
     private String drugName;

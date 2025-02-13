@@ -28,7 +28,7 @@ public class Drug {
     @Column(nullable = false)
     private String drugName;
 
-    @Column(nullable = false)
-    private Boolean drugCode;
+    @Column(nullable = false, unique = true)
+    private String drugCode;
 
 }
